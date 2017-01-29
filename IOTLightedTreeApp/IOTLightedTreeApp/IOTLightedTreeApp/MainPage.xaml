@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IOTLightedTreeApp"
+             x:Class="IOTLightedTreeApp.MainPage">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    
+    <Label
+      Grid.Row="0"
+      Grid.Column="0"
+      Grid.ColumnSpan="3"
+      Margin="0,20,0,5"
+      HorizontalOptions="LayoutOptions.Center"
+      FontSize="16"
+      Text="XMas Tree Light"/>
+    
+    <Label
+      Grid.Row="1"
+      Grid.Column="0"
+      Margin="0,5,0,5"
+      HorizontalOptions="LayoutOptions.End"
+      Text="IPAddress http://"/>
+
+    <Entry
+      x:Name="txtIPAddr"
+      Grid.Row="1"
+      Grid.Column="1"
+      Margin="0"
+      HorizontalOptions="LayoutOptions.Fill"/>
+
+    <Label
+      Grid.Row="1"
+      Grid.Column="2"
+      Margin="0,5,5,5"
+      HorizontalOptions="LayoutOptions.Start"
+      Text="/"/>
+    
+    <Button
+      x:Name="btnStart"
+      Grid.Row="2"
+      Grid.Column="1"
+      Margin="5"
+      HorizontalOptions="LayoutOptions.Center"
+      Text="Start"
+      Clicked="StartClicked"/>
+
+    <Label
+      Grid.Row="3"
+      Grid.Column="0"
+      Margin="5"
+      HorizontalOptions="LayoutOptions.End"
+      Text="on/off"/>
+    
+    <Switch
+      x:Name="btnOnOff"
+      Grid.Row="3"
+      Grid.Column="1"
+      HorizontalOptions="LayoutOptions.Center"
+      Toggled="OnOffToggled"
+      />     
+  </Grid>
+
+</ContentPage>
